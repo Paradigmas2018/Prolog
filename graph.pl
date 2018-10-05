@@ -4,41 +4,41 @@
 
 
 % checks if graph already exists
-new_graph(G) :-
-  graph(G),
+new_graph(Graph) :-
+  graph(Graph),
   !.
 
 % if graph does not exist, adds to the knowledge base
-new_graph(G) :-
-  assert(graph(G)),
+new_graph(Graph) :-
+  assert(graph(Graph)),
   !.
 
 % checks if vertex already exists
-add_vertex(G, V) :-
-  nonvar(G),
-  nonvar(V),
-  graph(G),
-  vertex(G, V),
+add_vertex(Graph, Vertex) :-
+  nonvar(Graph),
+  nonvar(Vertex),
+  graph(Graph),
+  vertex(Graph, Vertex),
   !.
 
 % if vertex does not exist, adds to the knowledge base
-add_vertex(G, V) :-
-  assert(vertex(G, V)),
+add_vertex(Graph, Vertex) :-
+  assert(vertex(Graph, Vertex)),
   !.
 
 % checks if edge already exists
-add_edge(G, U, V, Weight) :-
-  nonvar(G),
-  nonvar(U),
-  nonvar(V),
+add_edge(Graph, Origin, Destination, Weight) :-
+  nonvar(Graph),
+  nonvar(Origin),
+  nonvar(Destination),
   nonvar(Weight),
-  graph(G),
-  edge(G, U, V, _),
-  retractall(edge(G, U, V, _)),
-  add_edge(G, U, V, Weight),
+  graph(Graph),
+  edge(Graph, Origin, Destination, _),
+  retractall(edge(Graph, Origin, Destination, _)),
+  add_edge(Graph, Origin, Destination, Weight),
   !.
 
 % if edge does not exist, adds to the knowledge base
-add_edge(G, U, V, Weight) :-
-  assert(edge(G, U, V, Weight)),
+add_edge(Graph, Origin, Destination, Weight) :-
+  assert(edge(Graph, Origin, Destination, Weight)),
   !.
