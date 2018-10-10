@@ -19,10 +19,10 @@ connects_to(station(gare_centrale , line_1), station(parc, line_1), 410).
 connects_to(station(parc , line_1), station(arts_loi, line_1), 450).
 connects_to(station(arts_loi , line_1), station(maelbeek, line_1), 580).
 connects_to(station(maelbeek , line_1), station(schuman, line_1), 390).
-connects_to(station(connects_to(station(gare_centrale , line_1), station(parc, line_1), 410).
+connects_to(station(schuman , line_1), station(parc, line_1), 410).
 connects_to(station(parc , line_1), station(arts_loi, line_1), 450).
 connects_to(station(arts_loi , line_1), station(maelbeek, line_1), 580).
-connects_to(station(maelbeek , line_1), station(schuman, line_1), 390). , line_1), station(parc, line_1), 410).
+connects_to(station(maelbeek , line_1), station(schuman, line_1), 390).
 connects_to(station(schuman , line_1), station(merode, line_1), 1190).
 connects_to(station(merode , line_1), station(montgomery, line_1), 670).
 connects_to(station(montgomery , line_1), station(josephine_charlotte, line_1), 480).
@@ -54,3 +54,20 @@ connects_to(station(botanique , line_2), station(rogier, line_2), 530).
 connects_to(station(rogier , line_2), station(yser, line_2), 450).
 connects_to(station(yser , line_2), station(ribaucourt, line_2), 1120).
 connects_to(station(ribaucourt , line_2), station(elisabeth, line_2), 580).
+
+% Line 3 - Green
+
+connects_to(station(esplanade , line_3), station(de_wand, line_3), 780).
+connects_to(station(de_wand , line_3), station(rogier, line_3), 780).
+connects_to(station(rogier , line_3), station(de_brouckere, line_3), 780).
+connects_to(station(de_brouckere , line_3), station(bourse_beurs, line_3), 780).
+connects_to(station(bourse_beurs , line_3), station(anneessens, line_3), 780).
+connects_to(station(anneessens , line_3), station(lemonnier, line_3), 780).
+connects_to(station(lemonnier , line_3), station(gare_du_midi, line_3), 780).
+connects_to(station(gare_du_midi , line_3), station(hallepoort, line_3), 780).
+connects_to(station(hallepoort , line_3), station(parvis_de_saint_gilles, line_3), 780).
+connects_to(station(parvis_de_saint_gilles , line_3), station(horta, line_3), 780).
+connects_to(station(horta , line_3), station(albert, line_3), 780).
+connects_to(station(albert , line_3), station(vanderkindere, line_3), 780).
+connects_to(station(vanderkindere , line_3), station(churchill, line_3), 780).
+
