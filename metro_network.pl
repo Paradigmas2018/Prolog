@@ -49,3 +49,65 @@ train('line 2',
     ['elisabeth', 580]
   ]
 ).
+
+train('line 3',
+  [
+    ['esplanade', 0],
+    ['de wand', 780],
+    ['rogier', 400],
+    ['de brouckere', 540],
+    ['bourse beurs', 500],
+    ['anneessens', 610],
+    ['lemonnier', 740],
+    ['gare du midi', 600],
+    ['hallepoort', 600],
+    ['parvis de saint-gilles', 430],
+    ['horta', 470],
+    ['albert', 590],
+    ['vanderkindere', 430],
+    ['churchill', 520]
+  ]
+).
+
+train('line 4',
+  [
+    ['stalle', 0],
+    ['vanderkindere', 780],
+    ['albert', 400],
+    ['horta, 540],
+    ['parvis de saint-gilles', 500],
+    ['hallepoort', 600],
+    ['gare du midi', 600],
+    ['lemonnier', 740],
+    ['anneessens', 610],
+    ['bourse beurs', 500],
+    ['de brouckere', 540],
+    ['rogier', 400],
+    ['noordstation', 580]
+  ]
+).
+
+train('line 5',
+  [
+    ['simonis', 0],
+    ['osseghem', 780],
+    ['beekkant', 400],
+    ['gare de l\'ouest', 540],
+    ['delacroix', 500],
+    ['clemenceau', 610],
+    ['gare du midi', 740],
+    ['porte de hal', 600],
+    ['hotel des monnaies', 430],
+    ['louise', 470],
+    ['porte de namur', 590],
+    ['trone', 430],
+    ['arts-loi', 520],
+    ['madou', 490],
+    ['botanique', 460],
+    ['rogier', 530],
+    ['yser', 450],
+    ['ribaucourt', 1120],
+    ['elisabeth', 580]
+  ]
+).
+
