@@ -87,27 +87,3 @@ train('line 4',
   ]
 ).
 
-train('line 5',
-  [
-    ['simonis', 0],
-    ['osseghem', 780],
-    ['beekkant', 400],
-    ['gare de l\'ouest', 540],
-    ['delacroix', 500],
-    ['clemenceau', 610],
-    ['gare du midi', 740],
-    ['porte de hal', 600],
-    ['hotel des monnaies', 430],
-    ['louise', 470],
-    ['porte de namur', 590],
-    ['trone', 430],
-    ['arts-loi', 520],
-    ['madou', 490],
-    ['botanique', 460],
-    ['rogier', 530],
-    ['yser', 450],
-    ['ribaucourt', 1120],
-    ['elisabeth', 580]
-  ]
-).
-
