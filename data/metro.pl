@@ -71,3 +71,18 @@ connects_to(station(horta , line_3), station(albert, line_3), 780).
 connects_to(station(albert , line_3), station(vanderkindere, line_3), 780).
 connects_to(station(vanderkindere , line_3), station(churchill, line_3), 780).
 
+
+% Line 4 - 
+
+connects_to(station(stalle , line_4), station(vanderkindere, line_4), 780).
+connects_to(station(vanderkindere , line_4), station(albert, line_4), 780).
+connects_to(station(albert , line_4), station(horta, line_4), 780).
+connects_to(station(horta , line_4), station(parvis_de_saint_gilles, line_4), 780).
+connects_to(station(parvis_de_saint_gilles , line_4), station(hallepoort, line_4), 780).
+connects_to(station(hallepoort , line_4), station(gare_du_midi, line_4), 780).
+connects_to(station(gare_du_midi , line_4), station(lemonnier, line_4), 780).
+connects_to(station(lemonnier , line_4), station(anneessens, line_4), 780).
+connects_to(station(anneessens , line_4), station(bourse_beurs, line_4), 780).
+connects_to(station(bourse_beurs , line_4), station(de_brouckere, line_4), 780).
+connects_to(station(de_brouckere , line_4), station(rogier, line_4), 780).
+connects_to(station(rogier , line_4), station(noordstation, line_4), 780).
