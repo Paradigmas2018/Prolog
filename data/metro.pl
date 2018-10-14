@@ -13,29 +13,26 @@ connects_to(station(arts_loi , line_2), station(arts_loi, line_1), 0).
 
 % Intersection - Line 1/Line 3
 connects_to(station(de_brouckere , line_1), station(de_brouckere, line_3), 0).
-
 connects_to(station(de_brouckere , line_3), station(de_brouckere, line_1), 0).
 
 % Intersection - Line 1/Line 4
 connects_to(station(de_brouckere , line_1), station(de_brouckere, line_4), 0).
-
 connects_to(station(de_brouckere , line_4), station(de_brouckere, line_1), 0).
 
 % Intersection - Line 2/Line 3
 connects_to(station(rogier , line_2), station(rogier, line_3), 0).
 connects_to(station(gare_du_midi , line_2), station(gare_du_midi, line_3), 0).
-
 connects_to(station(rogier , line_3), station(rogier, line_2), 0).
 connects_to(station(gare_du_midi , line_3), station(gare_du_midi, line_2), 0).
 
 % Intersection - Line 2/Line 4
 connects_to(station(rogier , line_2), station(rogier, line_4), 0).
 connects_to(station(gare_du_midi , line_2), station(gare_du_midi, line_4), 0).
-
 connects_to(station(rogier , line_4), station(rogier, line_2), 0).
 connects_to(station(gare_du_midi , line_4), station(gare_du_midi, line_2), 0).
 
 % Intersection - Line 3/Line 4
+
 connects_to(station(vanderkindere , line_3), station(vanderkindere, line_4), 0).
 connects_to(station(albert , line_3), station(albert, line_4), 0).
 connects_to(station(horta , line_3), station(horta, line_4), 0).
@@ -48,7 +45,6 @@ connects_to(station(bourse_beurs , line_3), station(bourse_beurs, line_4), 0).
 connects_to(station(de_brouckere , line_3), station(de_brouckere, line_4), 0).
 connects_to(station(rogier , line_3), station(rogier, line_4), 0).
 connects_to(station(noordstation , line_3), station(noordstation, line_4), 0).
-
 connects_to(station(vanderkindere , line_4), station(vanderkindere, line_3), 0).
 connects_to(station(albert , line_4), station(albert, line_3), 0).
 connects_to(station(horta , line_4), station(horta, line_3), 0).
@@ -61,8 +57,6 @@ connects_to(station(bourse_beurs , line_4), station(bourse_beurs, line_3), 0).
 connects_to(station(de_brouckere , line_4), station(de_brouckere, line_3), 0).
 connects_to(station(rogier , line_4), station(rogier, line_3), 0).
 connects_to(station(noordstation , line_4), station(noordstation, line_3), 0).
-
-
 
 % Line 1 - BLUE 
 
@@ -86,7 +80,6 @@ connects_to(station(roodebeek , line_1), station(vandervelde, line_1), 880).
 connects_to(station(vandervelde , line_1), station(alma, line_1), 2090).
 connects_to(station(alma , line_1), station(crainheim, line_1), 1960).
 connects_to(station(crainheim , line_1), station(stockel, line_1), 940).
-
 connects_to(station(beekkant, line_1), station(gare_de_louest , line_1), 540).
 connects_to(station(etangs_noirs, line_1), station(beekkant , line_1), 780).
 connects_to(station(comte_de_flandre, line_1), station(etangs_noirs , line_1), 580).
@@ -129,7 +122,6 @@ connects_to(station(botanique , line_2), station(rogier, line_2), 530).
 connects_to(station(rogier , line_2), station(yser, line_2), 450).
 connects_to(station(yser , line_2), station(ribaucourt, line_2), 1120).
 connects_to(station(ribaucourt , line_2), station(elisabeth, line_2), 580).
-
 connects_to(station(osseghem, line_2), station(simonis , line_2), 780).
 connects_to(station(beekkant, line_2), station(osseghem , line_2), 400).
 connects_to(station(gare_de_louest, line_2), station(beekkant , line_2), 540).
@@ -164,7 +156,6 @@ connects_to(station(parvis_de_saint_gilles , line_3), station(horta, line_3), 78
 connects_to(station(horta , line_3), station(albert, line_3), 780).
 connects_to(station(albert , line_3), station(vanderkindere, line_3), 780).
 connects_to(station(vanderkindere , line_3), station(churchill, line_3), 780).
-
 connects_to(station(de_wand, line_3), station(esplanade , line_3), 780).
 connects_to(station(rogier, line_3), station(de_wand , line_3), 780).
 connects_to(station(de_brouckere, line_3), station(rogier , line_3), 780).
@@ -193,7 +184,6 @@ connects_to(station(anneessens , line_4), station(bourse_beurs, line_4), 780).
 connects_to(station(bourse_beurs , line_4), station(de_brouckere, line_4), 780).
 connects_to(station(de_brouckere , line_4), station(rogier, line_4), 780).
 connects_to(station(rogier , line_4), station(noordstation, line_4), 780).
-
 connects_to(station(vanderkindere, line_4), station(stalle , line_4), 780).
 connects_to(station(albert, line_4), station(vanderkindere , line_4), 780).
 connects_to(station(horta, line_4), station(albert , line_4), 780).

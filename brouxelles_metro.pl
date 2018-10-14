@@ -109,8 +109,7 @@ writePath([station(StationName,Line)|Path]) :-
 	write(StationName),!,write('('),write(Line),write(')'), write(' -> '),
 	writePath(Path).
 
-
-%  Get path from start position to destionation
+%  Get path from start position to destination
 goes_to(From, To, Path, Distance) :-
 	travel(From, To, [From], AccPath, Distance),
 	reverse(AccPath, Path).
