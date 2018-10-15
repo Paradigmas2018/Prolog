@@ -12,7 +12,7 @@ menu :- repeat,
 
 doit(1):-
 	write('Qual nome da estação?'), nl,
-	read(NewStation),
+	read(NewStation), nl,
 	write('Qual linha da estação?'), nl,
 	read(LineOfNewStation),
 	write('A qual o nome estação ela esta conectada?'), nl,
@@ -82,7 +82,7 @@ doit(2) :-
 	
 
 doit(3):-
-    write('Qual nome da estação origem?'), nl,
+  write('Qual nome da estação origem?'), nl,
 	read(Origin),
 	write('A qual o nome estação destino?'), nl,
 	read(Destination),
@@ -95,20 +95,25 @@ doit(4):-
     abort.
 
 writePath([]).
-writePath([station(StationName,Line1)|[station(StationName,_)|[station(StationName,_)|[station(StationName,Line2)|Path]]]]) :-
-	write(StationName), write('('), write(Line1), write('->'),write(Line2),write(')'), write(' -> '),
+writePath([station(StationName, Line1)|[station(StationName,_)|[station(StationName,_)|[station(StationName,Line2)|Path]]]]) :-
+	ansi_format(fg(red), '~w', [StationName]),
+  ansi_format(fg(white), '~nTroca de linha: ~w ❯ ~w ~n', [Line1, Line2]),
 	writePath(Path).
-writePath([station(StationName,Line1)|[station(StationName,_)|[station(StationName,Line2)|Path]]]) :-
-	write(StationName), write('('), write(Line1), write('->'),write(Line2),write(')'), write(' -> '),
+writePath([station(StationName, Line1)|[station(StationName,_)|[station(StationName,Line2)|Path]]]) :-
+	ansi_format(fg(red), '~w', [StationName]),
+	ansi_format(fg(white), '~nTroca de linha: ~w ❯ ~w ~n', [Line1, Line2]),
 	writePath(Path).
-writePath([station(StationName,Line1)|[station(StationName,Line2)|Path]]) :-
-	write(StationName), write('('), write(Line1), write('->'),write(Line2),write(')'), write(' -> '),
+writePath([station(StationName, Line1)|[station(StationName,Line2)|Path]]) :-
+	ansi_format(fg(red), '~w', [StationName]),
+	ansi_format(fg(white), '~nTroca de linha: ~w ❯ ~w ~n', [Line1, Line2]),
 	writePath(Path).
-writePath([station(StationName,Line)|[]]) :-
-	write(StationName),write('('),write(Line),write(')').
-writePath([station(StationName,Line)|Path]) :-
-	write(StationName),!,write('('),write(Line),write(')'), write(' -> '),
+writePath([station(StationName, _)|[]]) :-
+  ansi_format(fg(red), '~w', [StationName]).
+writePath([station(StationName, _)|Path]) :-
+  ansi_format(fg(red), '~w', [StationName]),
+  ansi_format(fg(white), '~w', [' -> ']),
 	writePath(Path).
+
 
 %  Get path from start position to destination
 goes_to(From, To, Path, Distance) :-
@@ -126,4 +131,3 @@ travel(From, To, PathSoFar, Path, Distance) :-
 	\+member(NextStation, PathSoFar),
 	travel(NextStation, To, [NextStation|PathSoFar], Path, AccDistance),
 	Distance is TravelDistance + AccDistance.
-
