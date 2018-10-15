@@ -24,26 +24,26 @@ doit(1):-
 	assertz(
 		connects_to(
 			station(
-				NewStation, 
+				NewStation,
 				LineOfNewStation
-			), 
+			),
 			station(
-				ConnectedStation, 
+				ConnectedStation,
 				LineOfConnectedStation
-			), 
+			),
 			Distance
 		)
 	),
 	assertz(
 		connects_to(
 			station(
-				ConnectedStation, 
+				ConnectedStation,
 				LineOfConnectedStation
-			), 
+			),
 			station(
-				NewStation, 
+				NewStation,
 				LineOfNewStation
-			), 
+			),
 			Distance
 		)
 	).
@@ -56,30 +56,30 @@ doit(2) :-
 	retract(
 		connects_to(
 			station(
-				Station, 
+				Station,
 				_
-			), 
+			),
 			station(
-				ConnectedStation, 
+				ConnectedStation,
 				_
-			), 
+			),
 			Distance
 		)
 	),
 	retract(
 		connects_to(
 			station(
-				ConnectedStation, 
+				ConnectedStation,
 				_
-			), 
+			),
 			station(
-				Station, 
+				Station,
 				_
-			), 
+			),
 			Distance
 		)
 	).
-	
+
 
 doit(3):-
   write('Qual nome da estação origem?'), nl,
@@ -88,8 +88,8 @@ doit(3):-
 	read(Destination),
 	goes_to(station(Origin,_), station(Destination,_), Path, Distance),
 	DistanceInMinutes is Distance / 540,
-	write('Caminho: '), writePath(Path), nl,
-	write('Tempo: '),  format('~2f', [DistanceInMinutes]),!, write(' minutos'), nl.
+	nl, write('Caminho: '), nl, nl, writePath(Path), nl, nl,
+	write('Tempo: '),  format('~2f', [DistanceInMinutes]),!, write(' minutos'), nl, nl.
 
 doit(4):-
     abort.
@@ -120,7 +120,7 @@ goes_to(From, To, Path, Distance) :-
 	travel(From, To, [From], AccPath, Distance),
 	reverse(AccPath, Path).
 
-% Connects stations according to desired position 
+% Connects stations according to desired position
 travel(From, To, PathSoFar, [To|PathSoFar], Distance) :-
 	connects_to(From, To, Distance).
 
