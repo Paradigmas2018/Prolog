@@ -3,13 +3,13 @@
 % Facts Connect to - connects_to(station(name, line), station(name, line), distance_between_stations)
 
 % Intersection - Line 1/Line 2
-connects_to(station(gare_de_louest , line_1), station(gare_de_louest, line_2), 0).
-connects_to(station(beekkant , line_1), station(beekkant, line_2), 0).
-connects_to(station(arts_loi , line_1), station(arts_loi, line_2), 0).
+connects_to(station(gare_de_louest , line_1), station(gare_de_louest, line_2), 180).
+connects_to(station(beekkant , line_1), station(beekkant, line_2), 180).
+connects_to(station(arts_loi , line_1), station(arts_loi, line_2), 180).
 
-connects_to(station(gare_de_louest , line_2), station(gare_de_louest, line_1), 0).
-connects_to(station(beekkant , line_2), station(beekkant, line_1), 0).
-connects_to(station(arts_loi , line_2), station(arts_loi, line_1), 0).
+connects_to(station(gare_de_louest , line_2), station(gare_de_louest, line_1), 180).
+connects_to(station(beekkant , line_2), station(beekkant, line_1), 180).
+connects_to(station(arts_loi , line_2), station(arts_loi, line_1), 180).
 
 % Intersection - Line 1/Line 3
 connects_to(station(de_brouckere , line_1), station(de_brouckere, line_3), 0).

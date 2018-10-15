@@ -20,7 +20,7 @@ doit(1):-
 	write('A qual a linha da estação que ela esta conectada?'), nl,
 	read(LineOfConnectedStation),
 	write('Qual a distância média em minutos?'), nl,
-	read(Time),
+	read(Distance),
 	assertz(
 		connects_to(
 			station(
@@ -31,7 +31,7 @@ doit(1):-
 				ConnectedStation, 
 				LineOfConnectedStation
 			), 
-			Time
+			Distance
 		)
 	),
 	assertz(
@@ -44,7 +44,7 @@ doit(1):-
 				NewStation, 
 				LineOfNewStation
 			), 
-			Time
+			Distance
 		)
 	).
 
@@ -63,7 +63,7 @@ doit(2) :-
 				ConnectedStation, 
 				_
 			), 
-			Time
+			Distance
 		)
 	),
 	retract(
@@ -76,7 +76,7 @@ doit(2) :-
 				Station, 
 				_
 			), 
-			Time
+			Distance
 		)
 	).
 	
@@ -86,9 +86,10 @@ doit(3):-
 	read(Origin),
 	write('A qual o nome estação destino?'), nl,
 	read(Destination),
-	goes_to(station(Origin,_), station(Destination,_), Path, Duration),
+	goes_to(station(Origin,_), station(Destination,_), Path, Distance),
+	DistanceInMinutes is Distance / 540,
 	write('Caminho: '), writePath(Path), nl,
-	write('Distância: '), write(Duration),!, write(' metros'), nl.
+	write('Tempo: '),  format('~2f', [DistanceInMinutes]),!, write(' minutos'), nl.
 
 doit(4):-
     abort.
@@ -126,9 +127,3 @@ travel(From, To, PathSoFar, Path, Distance) :-
 	travel(NextStation, To, [NextStation|PathSoFar], Path, AccDistance),
 	Distance is TravelDistance + AccDistance.
 
-% Convert distance in distance in time to destionation
-time_to(Distance) :-
-	Factor is 360 // 100,
-	Y is Distance // Factor,
-	write(Factor), nl, 
-	write(Y).
